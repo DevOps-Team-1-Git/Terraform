@@ -187,6 +187,14 @@ resource "aws_security_group" "allowall_org1" {
 }
 
 
+# key pair
+resource "aws_key_pair" "defualt" {
+  key_name   = "Purple"
+  public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADQABAAABAQC+O6x7paobDWt4cilQqqU3GiasCNX+eLtJG2Ggaql0LVywT/Uh017XGJ2xuJZEjOqmjpSWLdV3uuQWXsfVgWN3Y2MbHOc5mWq1+OXUGA3mENnDndQG1mVdpx110ogh0zcrDNrdZERkvRb5TgvKxp9/UXD4uLp3o9qGM/o0tgfjtRsfM4Tzec4+OXZacMtDn1SaLi5IiFMTdryZw2Vh9SwzlmIYfRMI5uZsFtXN82eujsbazivsVAyGCk76wDfwCc32i2wGqqNtQonZ3qA4bC+NmR4oa1Se+1Jhv3dS4b9k1GBfXPmvn8vjbkhbJquQLiVOIwIGtaQWR+3hL/vz5jpl speed@speed-GE60-2PC"
+}
+
+
+
 ## EC2
 resource "aws_instance" "org1_webserver" {
 
