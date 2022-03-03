@@ -173,8 +173,8 @@ resource "aws_security_group" "allowall_org1" {
   vpc_id = aws_vpc.org1_vpc.id
   ingress {
     from_port   = 22
-    to_port     = 22
-    protocol    = "tcp"
+    to_port     = 100
+    protocol    = "-1"
     cidr_blocks = ["0.0.0.0/0"]
   }
   egress {
@@ -190,7 +190,7 @@ resource "aws_security_group" "allowall_org1" {
 # key pair
 resource "aws_key_pair" "defualt" {
   key_name   = "Purple"
-  public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADQABAAABAQC+O6x7paobDWt4cilQqqU3GiasCNX+eLtJG2Ggaql0LVywT/Uh017XGJ2xuJZEjOqmjpSWLdV3uuQWXsfVgWN3Y2MbHOc5mWq1+OXUGA3mENnDndQG1mVdpx110ogh0zcrDNrdZERkvRb5TgvKxp9/UXD4uLp3o9qGM/o0tgfjtRsfM4Tzec4+OXZacMtDn1SaLi5IiFMTdryZw2Vh9SwzlmIYfRMI5uZsFtXN82eujsbazivsVAyGCk76wDfwCc32i2wGqqNtQonZ3qA4bC+NmR4oa1Se+1Jhv3dS4b9k1GBfXPmvn8vjbkhbJquQLiVOIwIGtaQWR+3hL/vz5jpl speed@speed-GE60-2PC"
+  public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC+O6x7paobDWt4cilQqqU3GiasCNX+eLJG2Ggaql0LVywT/Uh017XGJ2xuJZEjOqmjpSWLdV3uuQWXsfVgWN3Y2MbHOc5mWq1+OXUGA3mENnDndQG1mVdpx110ogh0zcrDNrdZERkvRb5TgvKxp9/UXD4uLp3o9qGM/o0tgfjtRsfM4Tzec4+OXZacMtDn1SaLi5IiFMTdryZw2Vh9SwzlmIYfRMI5uZsFtXN82eujsbazivsVAyGCk76wDfwCc32i2wGqqNtQonZ3qA4bC+NmR4oa1Se+1Jhv3dS4b9k1GBfXPmvn8vjbkhbJquQLiVOIwIGtaQWR+3hL/vz5jpl speed@speed-GE60-2PC"
 }
 
 
