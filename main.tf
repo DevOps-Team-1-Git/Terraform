@@ -172,8 +172,8 @@ resource "aws_security_group" "allowall_org1" {
   name   = "allow all will fix later"
   vpc_id = aws_vpc.org1_vpc.id
   ingress {
-    from_port   = 22
-    to_port     = 100
+    from_port   = 0
+    to_port     = 0
     protocol    = "-1"
     cidr_blocks = ["0.0.0.0/0"]
   }
